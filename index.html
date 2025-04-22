@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moto Clube 7.62 - Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #e5e7eb;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+    section, nav, footer {
+      background-image: url('https://www.transparenttextures.com/patterns/metal.png');
+      background-blend-mode: overlay;
+    }
+    .logo-placeholder {
+      width: 150px;
+      height: 150px;
+      background-color: transparent;
+      border: 4px solid #4b4b4b;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-top: 4rem;
+      overflow: hidden;
+    }
+    .logo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .hero-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('imagens/fundo-home.png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid #4b4b4b;
+    }
+    .gallery-image {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      filter: sepia(20%) brightness(90%);
+    }
+    .gallery-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+      border: 3px solid #22c55e;
+      filter: sepia(0%) brightness(100%);
+    }
+    .rustic-btn {
+      background-color: #22c55e;
+      color: #1a1a1a;
+      font-size: 1.2rem;
+      border: 3px solid #4b4b4b;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+    .rustic-btn:hover {
+      background-color: #1a1a1a;
+      color: #22c55e;
+      border-color: #22c55e;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+    }
+    nav a {
+      font-size: 1.3rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    nav a:hover {
+      color: #22c55e;
+      text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+    }
+    /* Estilo para a navbar sumir/reaparecer */
+    nav {
+      transition: transform 0.3s ease-in-out;
+    }
+    .nav-hidden {
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="bg-black bg-opacity-90 fixed w-full top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-24">
+        <div class="flex items-center">
+          <div class="logo-placeholder">
+            <img src="imagens/logo-moto-clube.png" alt="Logo do Moto Clube 7.62">
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#home" class="text-gray-300 hover:text-green-500 px-3 py-2 text-sm font-medium">Home</a>
+          <a href="#sobre" class="text-gray-300 hover:text-green-500 px-3 py-2 text-sm font-medium">Sobre Nós</a>
+          <a href="#eventos" class="text-gray-300 hover:text-green-500 px-3 py-2 text-sm font-medium">Eventos</a>
+          <a href="#galeria" class="text-gray-300 hover:text-green-500 px-3 py-2 text-sm font-medium">Galeria</a>
+          <a href="#contato" class="text-gray-300 hover:text-green-500 px-3 py-2 text-sm font-medium">Contato</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section h-screen flex items-center justify-center text-center">
+    <div>
+      <h1 class="text-6xl font-bold text-white mb-4 tracking-wide">Moto Clube 7.62</h1>
+      <p class="text-2xl text-gray-300 mb-6">Paixão, estrada e irmandade</p>
+      <a href="#contato" class="rustic-btn px-8 py-4 inline-block">Junte-se à Estrada</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-green-500 mb-8 text-center tracking-wide">Nossa História</h2>
+      <p class="text-gray-300 text-xl leading-relaxed">
+        Somos o Moto Clube 7.62, uma irmandade forjada na estrada. Com o ronco dos motores e o vento no rosto, vivemos a liberdade e a camaradagem. Organizamos rolês épicos, encontros mensais e ações que fortalecem nossa comunidade em Santa Catarina. É mais que um clube, é um estilo de vida.
+      </p>
+    </div>
+  </section>
+
+  <!-- Eventos -->
+  <section id="eventos" class="py-20 bg-black bg-opacity-80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-green-500 mb-8 text-center tracking-wide">Eventos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-6 border-2 border-gray-600 shadow-xl">
+          <h3 class="text-2xl font-semibold text-white mb-2">Passeio Anual</h3>
+          <p class="text-gray-300">Uma viagem lendária pelas serras, reunindo irmãos de todo o Brasil.</p>
+        </div>
+        <div class="bg-gray-900 p-6 border-2 border-gray-600 shadow-xl">
+          <h3 class="text-2xl font-semibold text-white mb-2">Encontro Mensal</h3>
+          <p class="text-gray-300">Todo primeiro sábado, nos reunimos pra trocar ideias e planejar o próximo rolê.</p>
+        </div>
+        <div class="bg-gray-900 p-6 border-2 border-gray-600 shadow-xl">
+          <h3 class="text-2xl font-semibold text-white mb-2">Ação Social</h3>
+          <p class="text-gray-300">Juntamos forças pra ajudar comunidades, com o coração na estrada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-green-500 mb-8 text-center tracking-wide">Galeria</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <img src="imagens/grupo-moto-clube_1.png" alt="Grupo do Moto Clube 7.62" class="gallery-image rounded-none border-2 border-gray-600 shadow-lg">
+        <img src="imagens/evento1.png" alt="Evento do Moto Clube" class="gallery-image rounded-none border-2 border-gray-600 shadow-lg">
+        <img src="imagens/evento2.png" alt="Evento do Moto Clube" class="gallery-image rounded-none border-2 border-gray-600 shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-black bg-opacity-80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-green-500 mb-8 text-center tracking-wide">Entre em Contato</h2>
+      <div class="max-w-lg mx-auto">
+        <div class="space-y-4">
+          <input type="text" placeholder="Nome" class="w-full p-3 bg-gray-900 text-white border-2 border-gray-600 focus:outline-none focus:border-green-500 text-lg">
+          <input type="email" placeholder="E-mail" class="w-full p-3 bg-gray-900 text-white border-2 border-gray-600 focus:outline-none focus:border-green-500 text-lg">
+          <textarea placeholder="Mensagem" rows="5" class="w-full p-3 bg-gray-900 text-white border-2 border-gray-600 focus:outline-none focus:border-green-500 text-lg"></textarea>
+          <button class="w-full rustic-btn p-4">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-300 text-xl">© 2025 Moto Clube 7.62. Forjado na Estrada.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para ocultar/mostrar a navbar -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Rolando para baixo - oculta a navbar
+        navbar.classList.add('nav-hidden');
+      } else {
+        // Rolando para cima - mostra a navbar
+        navbar.classList.remove('nav-hidden');
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+</body>
+</html>
